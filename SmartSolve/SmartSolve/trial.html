@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+<meta name="p:domain_verify" content="28e934c826c14b50d8566460490226c8" />
+<script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+<script src="/static/js/typed.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+<meta name="p:domain_verify" content="28e934c826c14b50d8566460490226c8" />
+<title> SmartSolve</title>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6P40QX3XC"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3911342542125154" crossorigin="anonymous"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-T6P40QX3XC");
+  </script>
+<script data-ad-client="ca-pub-3911342542125154" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<style>
+  @import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    color: #6c859a;
+  }
+
+  body {
+    background-color: rgb(25, 25, 25);
+  }
+
+  navbar {
+    background-color: rgb(5, 5, 5);
+  }
+
+  thead {
+    background-color: #2f6794;
+    color: #a1b0bb;
+  }
+
+  tbody {
+    background-color: #1c2023;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #362f2f;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #333538;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333538;
+  }
+
+  .btn {
+    padding: 0.5rem 1.8rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.8);
+  }
+
+  .btn-outline-secondary {
+    padding: 0.5rem 1.8rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.8);
+    background-color: #313233;
+  }
+
+  .trae {
+    padding: 0.8rem 1.8rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.8);
+    background-color: #3879ba;
+  }
+
+  .content-bg {
+    background-color: rgb(30, 30, 30);
+    box-shadow: 13px 4px 19px 7px rgb(19 17 17);
+    border-radius: 20px;
+  }
+
+  @media only screen and (max-width: 500px) and (min-width: 300px) {
+    #AlertS {
+      font-size: 14px;
+    }
+  }
+
+  #baktop {
+    right: 10px;
+    margin-top: 500px;
+    position: fixed;
+  }
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .brand {
+    border: 1px solid black;
+    border-radius: 50px;
+  }
+
+  .dropdown-menu {
+    background-color: rgb(25, 25, 25);
+    border: 1.5px solid white;
+    border-radius: 10px;
+    color: blanchedalmond;
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+
+  .footer {
+    position: absolute;
+  }
+
+  .modelText {
+    font-size: 18px;
+  }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: rgb(20, 20, 20)">
+<a class="navbar-brand" href="/">
+<img src="./tech.png" class="brand" width="60" height="60" alt loading="lazy" />
+SkedWorx
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
+<ul class="navbar-nav">
+<li class="nav-item active">
+<a class="nav-link mx-3 font-weight-bolder" href="/">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Cipher
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="/Analyzer/Caesar-cipher-encoder-decoder/ ">Caesar cipher encoder/decoder</a>
+<a class="dropdown-item" href="/Analyzer/playfair-cipher-encoder-decoder/ ">Playfair cipher
+encoder/decoder</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Conversions
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="/Conversion/BinaryConverter/">Binary Converter</a>
+<a class="dropdown-item" href="/Conversion/DecimalConverter/">Decimal Converter</a>
+<a class="dropdown-item" href="/Conversion/HexadecimalConverter/">Hexadecimal Converter</a>
+<a class="dropdown-item" href="/Conversion/infix_to_postfix">infix to postfix Converter</a>
+<a class="dropdown-item" href="/Conversion/infix_to_prefix">infix to prefix Converter</a>
+<a class="dropdown-item" href="/Conversion/prefix_to_infix">Prefix to infix converter</a>
+<a class="dropdown-item" href="/Conversion/prefix_to_postfix">Prefix to postfix converter</a>
+<a class="dropdown-item" href="/Conversion/postfix_to_infix">Postfix to infix converter</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Calculators
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="/Calculator/BMI_calculator/">BMI Calculator</a>
+<a class="dropdown-item" href="/Calculator/Postfix_calculator/">Postfix Calculator</a>
+<a class="dropdown-item" href="/Calculator/Prefix_calculator/">Prefix Calculator</a>
+<a class="dropdown-item" href="/Calculator/Linear-regression-calculator/">Linear regression Calculator</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="../2.Translator/Translator.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Translator
+</a>
+<div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="../2.Translator/Translator.html">Translater</a> 
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  TO-DO list
+</a>
+<div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="../5.to-do list/index.html">To-Do list</a> 
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+More
+</a>
+<div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="">Contact me</a>
+<a class="dropdown-item" href="">Support Me❤️</a>
+<a class="dropdown-item" href="" target="_blank">Contribute</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+    function readCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(";");
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0)
+          return c.substring(nameEQ.length, c.length);
+      }
+    }
+
+    function setexpire() {
+      var date1 = new Date();
+
+      date1.setTime(
+        new Date(
+          date1.getFullYear(),
+          date1.getMonth(),
+          date1.getDate(),
+          date1.getHours() + 48
+        )
+      );
+
+      var x = Math.floor(Math.random() * 1000 + 1);
+
+      document.cookie =
+        "PopCookie" +
+        "=" +
+        x +
+        "; " +
+        "expires=" +
+        date1.toUTCString() +
+        ";path=/";
+    }
+    function setexpire_1Month() {
+      var date1 = new Date();
+
+      date1.setTime(
+        new Date(
+          date1.getFullYear(),
+          date1.getMonth() + 1,
+          date1.getDate(),
+          date1.getHours(),
+          date1.getMinutes()
+        )
+      );
+
+      var x = Math.floor(Math.random() * 1000 + 1);
+
+      document.cookie =
+        "PopCookie" +
+        "=" +
+        x +
+        "; " +
+        "expires=" +
+        date1.toUTCString() +
+        ";path=/";
+    }
+
+    var myCookie = readCookie("PopCookie");
+
+    if (myCookie == undefined) {
+      // code to show modal here
+      setTimeout(function () {
+        $("#DoLogin").modal("show");
+      }, 50000);
+    }
+    $("#mbdy").click(function (e) {
+      window.open("https://blog.calcont.in/");
+      setexpire_1Month();
+      $("#DoLogin").modal("hide");
+    });
+    $("#closeP").click(function (e) {
+      setexpire_1Month();
+      $("#DoLogin").modal("hide");
+    });
+    $(".signin").click(function (e) {
+      setexpire_1Month();
+      $("#DoLogin").modal("hide");
+    });
+  </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3911342542125154" crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3911342542125154" data-ad-slot="3259871936" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+</body>
+</body>
+</html>
